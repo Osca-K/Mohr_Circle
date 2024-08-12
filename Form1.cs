@@ -18,6 +18,8 @@ namespace Mohr_Circle
         public Form1()
         {
             InitializeComponent();
+
+            //Adding initial default values in SI unit 
             txtX.Text = "80";
             txtY.Text = "120";
             txtXY.Text = "40";
@@ -34,10 +36,12 @@ namespace Mohr_Circle
 
         private void btnExit_Click(object sender, EventArgs e)
         {
+           //To exit the project
             Application.Exit();
         }
         private void ClearInputs()
         {
+          //Incase user wanna put their own values
             txtX.Text = txtY.Text = txtXY.Text = "";
             cmbX.Text = cmbY.Text = cmbXY.Text = "";
             pnlCanva.Refresh();
@@ -135,6 +139,7 @@ namespace Mohr_Circle
 
         private void btnDraw_Click(object sender, EventArgs e)
         {
+            //Drwaing mohrCicle 
             tabControl.SelectedTab = tabMohrCicle;
             MohrClicle();
         }
